@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Configurações iniciais de codificação e responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phantom Blade Zero - ARK GAMING</title>
+  <!-- Ligação às folhas de estilo externas (CSS Global e CSS específico de Jogos) -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jogos.css">
+  <!-- Importação dos ícones do Bootstrap (para o boneco de login e carrinho) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="game-page">
+
+  <!-- ========================================= -->
+  <!-- CABEÇALHO / NAVBAR                        -->
+  <!-- ========================================= -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="Imagens/logo.jpg" alt="ARK GAMING">
+      </a>
+    </div>
+    <ul class="nav-center">
+      <li class="hover-pill"><a href="pc.html">PC</a></li>
+      <li class="hover-pill"><a href="ps.html">PlayStation</a></li>
+      <li class="hover-pill"><a href="X.html">Xbox</a></li>
+      <li class="hover-pill"><a href="ntd.html">Nintendo</a></li>
+    </ul>
+    <div class="nav-right">
+      <!-- Ligação direta para a página de login -->
+      <a href="login.html" class="icon-btn hover-pill"><i class="bi bi-person"></i></a>
+      <a href="#" class="icon-btn hover-pill"><i class="bi bi-cart-dash"></i></a>
+    </div>
+  </header>
+
+  <!-- ========================================= -->
+  <!-- HERO BANNER / SECÇÃO SUPERIOR DO JOGO     -->
+  <!-- ========================================= -->
+  <!-- Usa uma imagem de fundo em destaque com gradiente escuro aplicado -->
+  <div class="game-hero-bg" style="background: linear-gradient(180deg, rgba(27,27,27,0.3) 0%, #1b1b1b 100%), url('Imagens/Phantom-blade.jpg') center top / cover no-repeat;">
+    <div class="game-hero-wrapper">
+      
+      <!-- Capa do Jogo (Lado Esquerdo) -->
+      <div class="game-cover">
+        <img src="Imagens/Phantom-blade.jpg" alt="Phantom Blade Zero">
+      </div>
+
+      <!-- Card de Compra (Lado Direito) -->
+      <div class="game-buy-card">
+        <h2>Phantom Blade Zero - PC (Steam)</h2>
+        
+        <!-- Badges de plataforma e estado -->
+        <div class="game-badges">
+          <span class="badge-platform">Steam</span>
+          <span class="badge-status">✔ In stock</span>
+          <span class="badge-status">✔ Digital download</span>
+        </div>
+
+        <div class="users-count">
+          🔥 284 users on this page
+        </div>
+
+        <!-- Linha de preços com o desconto e o valor atual -->
+        <div class="game-price-row">
+          <span class="old-price">59.99 €</span>
+          <span class="badge-discount">-24%</span>
+          <span class="current-price">45.49 €</span>
+        </div>
+
+        <!-- Ações de compra (Wishlist e Adicionar ao Carrinho) -->
+        <div class="buy-actions">
+          <button class="btn-wishlist">♡</button>
+          <button class="btn-add-cart">🛒 Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- CONTEÚDO PRINCIPAL / DETALHES DO JOGO     -->
+  <!-- ========================================= -->
+  <main class="game-details-container">
+    
+    <!-- Aviso de ativação -->
+    <div class="notice-banner">
+      ⚠️ Ativação imediata via Steam
+    </div>
+
+    <!-- Secção Sobre o Jogo (Descrição e Meta Informação) -->
+    <section class="about-section">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>
+          Phantom Blade Zero é um jogo de ação frenético em catacumbas e mundos sombrios, misturando artes marciais tradicionais chinesas com steampunk e elementos de alta intensidade. Assumas o papel de Soul, um assassino altamente qualificado num universo implacável.
+        </p>
+        <a href="#" class="read-more">Read more</a>
+
+        <!-- Tags atribuídas pelos utilizadores -->
+        <div class="user-tags">
+          <span>User tags*:</span>
+          <span class="tag">Action</span>
+          <span class="tag">Hack and Slash</span>
+          <span class="tag">Martial Arts</span>
+          <span class="tag">Souls-like</span>
+        </div>
+      </div>
+
+      <!-- Tabela lateral com detalhes técnicos -->
+      <div class="about-meta">
+        <div class="meta-row"><span>Country Compatibility:</span> <strong>See the list</strong></div>
+        <div class="meta-row"><span>Languages:</span> <strong>See the supported languages</strong></div>
+        <div class="meta-row"><span>Installation:</span> <strong>How to activate your game</strong></div>
+        <div class="meta-row"><span>Developer:</span> <strong>S-Game</strong></div>
+        <div class="meta-row"><span>Publisher:</span> <strong>S-Game</strong></div>
+        <div class="meta-row"><span>Release date:</span> <strong>2026</strong></div>
+        <div class="meta-row"><span>Genre:</span> <strong>Action, RPG</strong></div>
+      </div>
+    </section>
+
+    <!-- Secção de Imagens / Preview Visual -->
+    <section class="visuals-section">
+      <h2>Visuals</h2>
+      <div class="visuals-preview">
+        <img src="Imagens/Phantom-blade.jpg" alt="Phantom Blade Zero Visuals">
+      </div>
+    </section>
+
+    <!-- Secção de Funcionalidades do Jogo (Features) -->
+    <section class="features-section">
+      <h2>Game features</h2>
+      <div class="features-grid">
+        <div class="feature-card"><span>👤</span><p>Single-player</p></div>
+        <div class="feature-card"><span>⚔️</span><p>Fast-paced Combat</p></div>
+        <div class="feature-card"><span>🏆</span><p>Steam Achievements</p></div>
+        <div class="feature-card"><span>☁️</span><p>Steam Cloud</p></div>
+        <div class="feature-card"><span>🎮</span><p>Controller Support</p></div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

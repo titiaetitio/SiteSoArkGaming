@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Configuração básica de codificação e responsividade inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK GAMING</title>
+    <!-- Ligação à folha de estilos principal (CSS Externo - Alínea A) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importação dos ícones do Bootstrap (para o boneco de login e carrinho) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- CABEÇALHO / BARRA DE NAVEGAÇÃO (Navbar)   -->
+    <!-- ========================================= -->
+    <header class="navbar">
+        <!-- Lado esquerdo: Logótipo do projeto que redireciona para a página inicial (Alínea C) -->
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="Imagens/logo.jpg" alt="ARK GAMING">
+            </a>
+        </div>
+        
+        <!-- Centro: Menu de navegação construído com Flexbox (Alínea C) -->
+        <nav>
+            <ul class="nav-center">
+                <li class="hover-pill"><a href="pc.html">PC</a></li>
+                <li class="hover-pill"><a href="ps.html">PlayStation</a></li>
+                <li class="hover-pill"><a href="X.html">Xbox</a></li>
+                <li class="hover-pill"><a href="ntd.html">Nintendo</a></li>
+            </ul>
+        </nav>
+
+        <!-- Lado direito: Botões de Acesso/Login e Carrinho -->
+        <div class="nav-right">
+            <!-- Botão de login que direciona para a página de formulário -->
+            <a href="login.html" class="icon-btn hover-pill"><i class="bi bi-person"></i></a>
+            <!-- Botão do carrinho de compras -->
+            <a href="#" class="icon-btn hover-pill"><i class="bi bi-cart-dash"></i></a>
+        </div>
+    </header>
+
+    <!-- ========================================= -->
+    <!-- CONTEÚDO PRINCIPAL (Main)                 -->
+    <!-- ========================================= -->
+    <main class="main-container">
+        
+        <!-- Banner Principal em Destaque (FC 27) -->
+        <a href="fc27.html" class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">FC 27</h1>
+                <div class="hero-price-wrapper">
+                    <span class="badge-discount">-41%</span>
+                    <span class="hero-price">35.49 €</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Secção de Jogos em Tendência (Trending) -->
+        <section class="trending-section">
+            <div class="trending-header">
+                <h2>Trending ></h2>
+            </div>
+
+            <!-- Grelha de Jogos estruturada com CSS GRID (Alínea B) -->
+            <div class="games-grid">
+                
+                <!-- Card 1: Cyberpunk 2077 -->
+                <a href="cyberpunk.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/cyberpunk.jpg" alt="Cyberpunk 2077">
+                        <span class="badge-discount">-60%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">Cyberpunk 2077 - PC (Steam)</span>
+                        <span class="game-price">23.99 €</span>
+                    </div>
+                </a>
+
+                <!-- Card 2: Phantom Blade Zero -->
+                <a href="Blade-Zero.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/Phantom-blade.jpg" alt="Phantom Blade Zero">
+                        <span class="badge-discount">-24%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">Phantom Blade Zero - PC (Steam)</span>
+                        <span class="game-price">45.49 €</span>
+                    </div>
+                </a>
+
+                <!-- Card 3: Call of Duty -->
+                <a href="cod.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/CODMW4.jpg" alt="Call of Duty">
+                        <span class="badge-discount">-31%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">Call of Duty: Modern Warfare...</span>
+                        <span class="game-price">55.49 €</span>
+                    </div>
+                </a>
+
+                <!-- Card 4: Zelda -->
+                <a href="zelda.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/Legend of zelda.png" alt="The Legend of Zelda">
+                        <span class="badge-discount">-10%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">The Legend of Zelda: Ocarina of Time</span>
+                        <span class="game-price">49.99 €</span>
+                    </div>
+                </a>
+
+                <!-- Card 5: Casualties Unknown -->
+                <a href="casualties.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/casualties.png" alt="Casualties Unknown">
+                        <span class="badge-discount">-41%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">Casualties Unknown - PC (Steam)</span>
+                        <span class="game-price">12.99 €</span>
+                    </div>
+                </a>
+
+                <!-- Card 6: Probably Stolen -->
+                <a href="stolen.html" class="game-card">
+                    <div class="card-image-box">
+                        <img src="Imagens/stolen.jpg" alt="Probably Stolen">
+                        <span class="badge-discount">-40%</span>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="game-name">Probably Stolen - PC (Steam)</span>
+                        <span class="game-price">14.99 €</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- BARRA DE VANTAGENS / TRUSTPILOT           -->
+        <!-- ========================================= -->
+        <section class="features-bar">
+            <div class="features-container">
+                
+                <!-- Vantagem 1: Download Rápido -->
+                <div class="feature-item">
+                    <div class="feature-icon">☁️</div>
+                    <div class="feature-texts">
+                        <h3>Super fast</h3>
+                        <p>Instant digital download</p>
+                    </div>
+                </div>
+
+                <!-- Vantagem 2: Segurança -->
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-texts">
+                        <h3>Reliable & safe</h3>
+                        <p>Over 20,000 games</p>
+                    </div>
+                </div>
+
+                <!-- Vantagem 3: Suporte ao Cliente -->
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-texts">
+                        <h3>Customer support</h3>
+                        <p>Human support 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Vantagem 4: Avaliação Trustpilot -->
+                <div class="feature-item trustpilot-item">
+                    <div class="trustpilot-header">
+                        <span class="tp-star-icon">★</span>
+                        <span class="tp-title">Trustpilot</span>
+                    </div>
+                    <div class="tp-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="tp-score">TrustScore <strong>4.7</strong> 845,985 reviews</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

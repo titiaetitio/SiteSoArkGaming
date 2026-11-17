@@ -1,0 +1,428 @@
+/* =========================================
+   1. CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borders não afetam a largura total */
+}
+
+body {
+    background-color: rgb(38, 38, 38); /* Cor de fundo principal do site */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #ffffff; /* Cor padrão do texto a branco */
+}
+
+/* =========================================
+   2. NAVBAR (BARRA SUPERIOR)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espaça logótipo, links centrais e botões da direita */
+    align-items: center;
+    background-color: #04050f; /* Fundo escuro característico da navbar */
+    padding: 10px 20px;
+    gap: 25px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    height: 50px;
+    width: auto; /* Mantém a proporção correta da imagem do logótipo */
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none; /* Remove os marcadores padrão da lista */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave no hover */
+}
+
+/* Efeito Hover Pílula para os links do menu */
+.hover-pill {
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.hover-pill:hover a,
+.hover-pill:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Fundo translúcido ao passar o rato */
+    color: #ff5400; /* Cor de destaque (laranja Instant Gaming) */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%; /* Torna o botão do ícone perfeitamente circular */
+    background-color: transparent;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1); /* Efeito de zoom ligeiro no ícone */
+}
+
+.icon-btn:hover i {
+    color: #ff5400;
+}
+
+/* =========================================
+   3. HERO BANNER (DESTAQUE PRINCIPAL)
+   ========================================= */
+.main-container {
+    width: 100%;
+}
+
+.hero-banner {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0c0d14;
+    /* Mistura gradiente escuro com a imagem de capa em destaque */
+    background-image: 
+        linear-gradient(90deg, #0c0d14 30%, rgba(12, 13, 20, 0.4) 60%, transparent 100%),
+        url('Imagens/FC27.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 380px;
+    padding: 0 60px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+}
+
+.hero-banner:hover {
+    transform: translateY(-2px); /* Eleva subtilmente o banner no hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    z-index: 2; /* Garante que o texto fica por cima do fundo */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.hero-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.badge-discount {
+    background-color: #ff5400;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    line-height: 1;
+}
+
+.hero-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* =========================================
+   4. TRENDING SECTION (GRELHA DE JOGOS)
+   ========================================= */
+.trending-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.trending-header h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.trending-header h2:hover {
+    color: #ff5400;
+}
+
+.games-grid {
+    display: grid;
+    /* Cria colunas automáticas com largura mínima de 350px */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+.game-card {
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden; /* Impede que a imagem transborde os cantos arredondados */
+    background-color: #1a1d24;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem distorcer as proporções */
+    display: block;
+    transition: filter 0.2s;
+}
+
+.game-card:hover .card-image-box img {
+    filter: brightness(1.1); /* Clareia ligeiramente a imagem ao passar o rato */
+}
+
+.card-image-box .badge-discount {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.85rem;
+    padding: 3px 8px;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 4px;
+}
+
+.game-name {
+    color: #c9d1d9;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências (...) se o nome do jogo for muito longo */
+    max-width: 240px;
+}
+
+.game-price {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* =========================================
+   5. BARRA DE VANTAGENS / TRUSTPILOT
+   ========================================= */
+.features-bar {
+    background-color: #121318;
+    border-top: 1px solid #1f222e;
+    border-bottom: 1px solid #1f222e;
+    padding: 25px 0;
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+
+.features-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    padding: 0 15px;
+    border-right: 1px solid #232736; /* Linha divisória vertical entre os blocos */
+    box-sizing: border-box;
+}
+
+.feature-item:last-child {
+    border-right: none; /* Remove a linha do último elemento */
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    background-color: rgba(255, 84, 0, 0.1);
+    color: #ff5400;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.feature-texts h3 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+}
+
+.feature-texts p {
+    color: #8b949e;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.trustpilot-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.trustpilot-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.tp-star-icon {
+    background-color: #00b67a;
+    color: #ffffff;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 0.75rem;
+}
+
+.tp-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.tp-stars .star {
+    background-color: #00b67a;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    border-radius: 2px;
+}
+
+.tp-score {
+    color: #8b949e;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.tp-score strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MEDIA QUERIES - RESPONSIVIDADE (Alínea G)
+   ========================================= */
+
+/* Para tablets e ecrãs médios (até 1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* Reduz a grelha de 3 para 2 colunas */
+  }
+
+  .game-hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+}
+
+/* Para telemóveis e ecrãs compactos (até 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .nav-center {
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr !important; /* Fixa apenas 1 jogo por linha no telemóvel */
+  }
+
+  .advantages-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Configurações iniciais de codificação e responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ARK GAMING</title>
+  <!-- Ligação ao CSS global do site -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- ========================================= -->
+  <!-- ESTILOS CSS ESPECÍFICOS DA PÁGINA DE LOGIN  -->
+  <!-- ========================================= -->
+  <style>
+    /* Contentor principal que centraliza a caixa de login no ecrã */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 70px); /* Altura total do ecrã menos o espaço da navbar */
+      background-color: #1b1b1b;
+      padding: 20px;
+    }
+
+    /* Caixa central do formulário (estilo cartão escuro) */
+    .login-box {
+      background-color: #262626;
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      border: 1px solid #333;
+    }
+
+    /* Título da caixa de login */
+    .login-box h2 {
+      color: #fff;
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Agrupamento de cada campo do formulário */
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    /* Rótulo / Texto descritivo do campo */
+    .input-group label {
+      display: block;
+      color: #b5b5b5;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    /* Campos de input (email e password) */
+    .input-group input {
+      width: 100%;
+      padding: 12px 16px;
+      background-color: #1b1b1b;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    /* Efeito de foco ao clicar no input (muda para vermelho corporativo) */
+    .input-group input:focus {
+      border-color: #ff4655;
+    }
+
+    /* Botão de submissão do formulário */
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4655;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 10px;
+    }
+
+    /* Efeito hover no botão de envio */
+    .btn-submit:hover {
+      background-color: #e03e4c;
+    }
+
+    /* Rodapé da caixa de login (texto de registo) */
+    .login-footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #888;
+      font-size: 13px;
+    }
+
+    .login-footer a {
+      color: #ff4655;
+      text-decoration: none;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================= -->
+  <!-- CABEÇALHO / NAVBAR                        -->
+  <!-- ========================================= -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="Imagens/logo.jpg" alt="ARK GAMING">
+      </a>
+    </div>
+    <ul class="nav-center">
+      <li class="hover-pill"><a href="pc.html">PC</a></li>
+      <li class="hover-pill"><a href="ps.html">PlayStation</a></li>
+      <li class="hover-pill"><a href="X.html">Xbox</a></li>
+      <li class="hover-pill"><a href="ntd.html">Nintendo</a></li>
+    </ul>
+    <div class="nav-right">
+      <!-- Ícone ativo de login na navbar -->
+      <a href="login.html" class="icon-btn hover-pill" style="color: #ff4655;"><i class="bi bi-person"></i></a>
+      <a href="#" class="icon-btn hover-pill"><i class="bi bi-cart-dash"></i></a>
+    </div>
+  </header>
+
+  <!-- ========================================= -->
+  <!-- CAIXA DE LOGIN CENTRALIZADA               -->
+  <!-- ========================================= -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Entrar na ARK GAMING</h2>
+      
+      <!-- Formulário com validação de dados integrada (Alínea E) -->
+      <!-- Usa o método GET para enviar os dados para o index.html -->
+      <form action="index.html" method="GET">
+        
+        <!-- Campo de E-mail (Obrigatório e valida formato de email) -->
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="teu.email@exemplo.com" required>
+        </div>
+
+        <!-- Campo de Palavra-passe (Obrigatório, mínimo de 6 carateres) -->
+        <div class="input-group">
+          <label for="password">Palavra-passe</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6">
+        </div>
+
+        <!-- Botão para submeter o formulário -->
+        <button type="submit" class="btn-submit">Entrar</button>
+      </form>
+
+      <!-- Opção secundária para novos utilizadores -->
+      <div class="login-footer">
+        Ainda não tens conta? <a href="#">Regista-te aqui</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
